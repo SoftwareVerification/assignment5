@@ -1,4 +1,7 @@
 answers/*.aux
 answers/*.log
 answers/*.pdf
+# IDE files
 .idea/
+out/
+*.iml
