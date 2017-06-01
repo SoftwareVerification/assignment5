@@ -6,13 +6,13 @@ import typing.Unify;
 import java.util.List;
 
 public interface Type extends Unify {
-    public abstract Type substitute(Subst subst);
+    Type substitute(Subst subst);
 
-    public default boolean containsTV(TypeVar var) {
+    default boolean containsTV(TypeVar var) {
         return false;
     }
 
-    public default void collectVars(List<TypeVar> vars) {
+    default void collectVars(List<TypeVar> vars) {
 
     }
 }
