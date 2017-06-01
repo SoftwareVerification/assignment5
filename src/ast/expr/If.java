@@ -1,6 +1,7 @@
 package ast.expr;
 
 import ast.type.Type;
+import ast.type.TypeConst;
 import typing.Environ;
 import typing.Subst;
 import typing.TVPool;
@@ -20,6 +21,8 @@ public class If implements Exp {
 
     @Override
     public void inferType(Environ env, Type sigma, Subst subst, TVPool tvPool) throws UnificationException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ifCond.inferType(env, TypeConst.BoolType, subst, tvPool);
+        ifThen.inferType(env, sigma, subst, tvPool);
+        ifElse.inferType(env, sigma, subst, tvPool);
     }
 }
