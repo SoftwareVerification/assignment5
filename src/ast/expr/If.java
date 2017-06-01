@@ -10,12 +10,12 @@ import typing.UnificationException;
  * @author Sjaak Smetsers <s.smetsers@cs.ru.nl>
  */
 public class If implements Exp {
-    public Exp ifCond, ifThen, IfElse;
+    public Exp ifCond, ifThen, ifElse;
 
     public If(Exp ce, Exp te, Exp ee) {
         this.ifCond = ce;
         this.ifThen = te;
-        this.IfElse = ee;
+        this.ifElse = ee;
     }
 
     @Override
